@@ -18,13 +18,10 @@ namespace Client
             // Use configuration from the application configuration file.
             var cacheFactory = new DataCacheFactory();
 
-            // Get cache client for cache "NamedCache1".
-            var dataCache = cacheFactory.GetCache("NamedCache1");
+            // Get cache client for cache "SampleNamedCache".
+            var dataCache = cacheFactory.GetCache("SampleNamedCache");
 
-            // Add an object to the cache.
-            dataCache.Add("helloKey", "hello world");
-
-            Application.Run(new Form1());
+            Application.Run(new Form2(dataCache));
         }
     }
 }
